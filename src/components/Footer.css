@@ -26,9 +26,11 @@
   margin-bottom: var(--space-4);
 }
 
-.footer-logo .logo-icon svg {
+.footer-logo .logo-icon svg,
+.footer-logo .logo-icon img {
   width: 36px;
   height: 36px;
+  object-fit: contain;
 }
 
 .footer-tagline {

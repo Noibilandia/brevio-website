@@ -31,9 +31,11 @@
   color: var(--color-text-primary);
 }
 
-.logo-icon svg {
+.logo-icon svg,
+.logo-icon img {
   width: 36px;
   height: 36px;
+  object-fit: contain;
 }
 
 .navbar-links {
