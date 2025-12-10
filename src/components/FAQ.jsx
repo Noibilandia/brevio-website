@@ -7,8 +7,8 @@ export function FAQ() {
 
   const faqs = [
     {
-      question: 'Which messaging apps does Brevio support?',
-      answer: 'Brevio integrates with 50+ apps including Slack, Gmail, WhatsApp, Discord, Microsoft Teams, Telegram, iMessage, Facebook Messenger, LinkedIn messages, and many more. We\'re constantly adding new integrations based on user requests.',
+      question: 'Which messaging apps does Chesly support?',
+      answer: 'Chesly integrates with 50+ apps including Slack, Gmail, WhatsApp, Discord, Microsoft Teams, Telegram, iMessage, Facebook Messenger, LinkedIn messages, and many more. We\'re constantly adding new integrations based on user requests.',
     },
     {
       question: 'How does the AI summarization work?',
@@ -19,31 +19,31 @@ export function FAQ() {
       answer: 'Security is our top priority. We use end-to-end encryption, are SOC2 Type II certified, and GDPR compliant. Your messages are processed securely and never used to train AI models. We don\'t store message content longer than necessary for the service.',
     },
     {
-      question: 'Can I reply to messages directly from Brevio?',
-      answer: 'Yes! You can reply to Slack messages, emails, WhatsApp, and more—all without leaving Brevio. Your replies are sent through the original platform, so the conversation continues naturally.',
+      question: 'Can I reply to messages directly from Chesly?',
+      answer: 'Yes! You can reply to Slack messages, emails, WhatsApp, and more—all without leaving Chesly. Your replies are sent through the original platform, so the conversation continues naturally.',
     },
     {
       question: 'How does the free trial work?',
       answer: 'Start with a 14-day free trial of our Pro plan—no credit card required. You\'ll have access to unlimited AI summaries, all integrations, and smart notification features. Downgrade to Free or upgrade to Team anytime.',
     },
     {
-      question: 'Will Brevio work with my company\'s existing tools?',
-      answer: 'Brevio is designed to work alongside your existing setup. It connects to your apps via official APIs and doesn\'t require any changes to how your team currently uses Slack, email, or other tools.',
+      question: 'Will Chesly work with my company\'s existing tools?',
+      answer: 'Chesly is designed to work alongside your existing setup. It connects to your apps via official APIs and doesn\'t require any changes to how your team currently uses Slack, email, or other tools.',
     },
     {
       question: 'Can I customize which notifications I receive?',
       answer: 'Absolutely. You can set rules based on sender, app, keywords, time of day, and more. Want AI summaries for Slack but instant notifications for email from your boss? You can configure that.',
     },
     {
-      question: 'Does Brevio have mobile apps?',
+      question: 'Does Chesly have mobile apps?',
       answer: 'Yes! We have native apps for iOS and Android that sync seamlessly with the desktop version. Your unified inbox and AI summaries are available wherever you are.',
     },
     {
-      question: 'How is Brevio different from email clients with unified inbox?',
-      answer: 'Traditional unified inboxes just aggregate messages. Brevio goes further with AI summarization, smart notification batching, cross-app search, and the ability to reply to any platform from one place. Plus, we support way more than just email.',
+      question: 'How is Chesly different from email clients with unified inbox?',
+      answer: 'Traditional unified inboxes just aggregate messages. Chesly goes further with AI summarization, smart notification batching, cross-app search, and the ability to reply to any platform from one place. Plus, we support way more than just email.',
     },
     {
-      question: 'Can I use Brevio with my team?',
+      question: 'Can I use Chesly with my team?',
       answer: 'Yes! Our Team plan includes shared inboxes, so your whole team can collaborate on customer messages, support requests, or any shared communication. Admin controls let you manage access and permissions.',
     },
   ];

@@ -8,7 +8,7 @@ export function Testimonials() {
 
   const testimonials = [
     {
-      quote: "Brevio completely changed how I handle messages. I went from checking 8 apps constantly to one calm inbox. I've saved at least 2 hours every single day.",
+      quote: "Chesly completely changed how I handle messages. I went from checking 8 apps constantly to one calm inbox. I've saved at least 2 hours every single day.",
       author: 'Sarah Chen',
       role: 'Product Manager',
       company: 'Stripe',
@@ -24,7 +24,7 @@ export function Testimonials() {
       rating: 5,
     },
     {
-      quote: "As a founder, I was drowning in messages from investors, customers, and my team. Brevio's smart filtering means I never miss what's urgent.",
+      quote: "As a founder, I was drowning in messages from investors, customers, and my team. Chesly's smart filtering means I never miss what's urgent.",
       author: 'Emily Watson',
       role: 'CEO',
       company: 'TechStart',
@@ -32,7 +32,7 @@ export function Testimonials() {
       rating: 5,
     },
     {
-      quote: "Finally, I can actually do deep work. Brevio batches my notifications intelligently so I'm not interrupted every 5 minutes. Game changer.",
+      quote: "Finally, I can actually do deep work. Chesly batches my notifications intelligently so I'm not interrupted every 5 minutes. Game changer.",
       author: 'David Kim',
       role: 'Senior Developer',
       company: 'Vercel',
@@ -40,7 +40,7 @@ export function Testimonials() {
       rating: 5,
     },
     {
-      quote: "Our whole team switched to Brevio. The shared inbox feature means we never have duplicate responses. Customer support has never been smoother.",
+      quote: "Our whole team switched to Chesly. The shared inbox feature means we never have duplicate responses. Customer support has never been smoother.",
       author: 'Lisa Thompson',
       role: 'Head of Support',
       company: 'Linear',
@@ -48,7 +48,7 @@ export function Testimonials() {
       rating: 5,
     },
     {
-      quote: "I was skeptical about another productivity tool. But Brevio is different—it actually reduces the tools I need. My inbox is finally under control.",
+      quote: "I was skeptical about another productivity tool. But Chesly is different—it actually reduces the tools I need. My inbox is finally under control.",
       author: 'James Park',
       role: 'Freelance Designer',
       company: 'Independent',
@@ -94,7 +94,7 @@ export function Testimonials() {
           </h2>
           <p className="section-description">
             Join thousands who've escaped notification chaos
-            and found focus with Brevio.
+            and found focus with Chesly.
           </p>
         </ScrollReveal>
 

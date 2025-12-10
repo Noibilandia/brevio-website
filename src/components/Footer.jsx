@@ -78,7 +78,7 @@ export function Footer() {
                   </defs>
                 </svg>
               </div>
-              <span>Brevio</span>
+              <span>Chesly</span>
             </a>
             <p className="footer-tagline">
               One inbox. Zero noise.
@@ -117,7 +117,7 @@ export function Footer() {
 
         <div className="footer-bottom">
           <p className="copyright">
-            © {new Date().getFullYear()} Brevio. All rights reserved.
+            © {new Date().getFullYear()} Chesly. All rights reserved.
           </p>
           <div className="footer-bottom-links">
             <a href="#">Privacy Policy</a>

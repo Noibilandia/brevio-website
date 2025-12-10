@@ -15,35 +15,35 @@
 
 /* Design Tokens - Light Mode (Default) */
 :root {
-  /* Colors - Brevio Brand */
+  /* Colors - Chesly Brand */
   --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f8fafc;
+  --color-bg-secondary: #0b1120;
   --color-bg-tertiary: #f1f5f9;
   --color-bg-elevated: rgba(255, 255, 255, 0.8);
 
-  --color-text-primary: #0f172a;
+  --color-text-primary: #020617;
   --color-text-secondary: #64748b;
   --color-text-tertiary: #94a3b8;
   --color-text-muted: #cbd5e1;
 
-  --color-accent: #7c3aed;
-  --color-accent-hover: #6d28d9;
+  --color-accent: #22d3ee;
+  --color-accent-hover: #06b6d4;
   --color-accent-light: rgba(124, 58, 237, 0.1);
   --color-accent-glow: rgba(124, 58, 237, 0.4);
 
   --color-cyan: #22d3ee;
   --color-cyan-light: rgba(34, 211, 238, 0.1);
 
-  --color-success: #10b981;
+  --color-success: #a3e635;
   --color-warning: #f59e0b;
-  --color-error: #ef4444;
+  --color-error: #f97373;
 
   --color-border: rgba(0, 0, 0, 0.08);
   --color-border-hover: rgba(0, 0, 0, 0.15);
 
-  /* Gradients - Brevio */
-  --gradient-primary: linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #5b21b6 100%);
-  --gradient-accent: linear-gradient(135deg, #7c3aed 0%, #22d3ee 100%);
+  /* Gradients - Chesly */
+  --gradient-primary: linear-gradient(135deg, #22d3ee 0%, #06b6d4 50%, #0891b2 100%);
+  --gradient-accent: linear-gradient(135deg, #22d3ee 0%, #22d3ee 100%);
   --gradient-subtle: linear-gradient(180deg, rgba(124, 58, 237, 0.05) 0%, transparent 100%);
   --gradient-radial: radial-gradient(ellipse at top, rgba(124, 58, 237, 0.15) 0%, transparent 50%);
   --gradient-mesh: radial-gradient(at 40% 20%, rgba(124, 58, 237, 0.1) 0px, transparent 50%),
@@ -94,7 +94,7 @@
   --space-40: 10rem;
   --space-48: 12rem;
 
-  /* Shadows - Brevio */
+  /* Shadows - Chesly */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
@@ -135,10 +135,10 @@
   --z-skip-link: 500;
 }
 
-/* Dark Mode - Brevio */
+/* Dark Mode - Chesly */
 [data-theme="dark"] {
   --color-bg-primary: #09090b;
-  --color-bg-secondary: #0f172a;
+  --color-bg-secondary: #020617;
   --color-bg-tertiary: #1e1b4b;
   --color-bg-elevated: rgba(15, 23, 42, 0.8);
 

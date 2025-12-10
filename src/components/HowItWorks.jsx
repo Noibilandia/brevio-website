@@ -17,7 +17,7 @@ export function HowItWorks() {
     {
       number: '02',
       title: 'Set your preferences',
-      description: 'Tell Brevio what\'s important. Set rules for AI summaries, notification priorities, and smart filters.',
+      description: 'Tell Chesly what\'s important. Set rules for AI summaries, notification priorities, and smart filters.',
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <circle cx="12" cy="12" r="3"/>
@@ -28,7 +28,7 @@ export function HowItWorks() {
     {
       number: '03',
       title: 'Let AI do the work',
-      description: 'Brevio\'s AI reads and summarizes your messages, highlighting what needs your attention right now.',
+      description: 'Chesly\'s AI reads and summarizes your messages, highlighting what needs your attention right now.',
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/>
@@ -61,7 +61,7 @@ export function HowItWorks() {
           </h2>
           <p className="section-description">
             No complex setup. No learning curve.
-            Connect your apps and let Brevio handle the rest.
+            Connect your apps and let Chesly handle the rest.
           </p>
         </ScrollReveal>
 

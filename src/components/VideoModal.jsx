@@ -49,7 +49,7 @@ export function VideoModal({ isOpen, onClose }) {
       <div className="video-modal">
         <div className="video-modal-header">
           <h2 id="video-modal-title" className="video-modal-title">
-            See Brevio in Action
+            See Chesly in Action
           </h2>
           <button
             ref={closeButtonRef}
@@ -86,7 +86,7 @@ export function VideoModal({ isOpen, onClose }) {
             </div>
             <p className="video-placeholder-text">Demo video coming soon</p>
             <p className="video-placeholder-subtext">
-              Watch how Brevio unifies all your messages and saves you hours every week
+              Watch how Chesly unifies all your messages and saves you hours every week
             </p>
           </div>
         </div>

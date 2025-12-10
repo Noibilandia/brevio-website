@@ -49,7 +49,7 @@ export function ValueProposition() {
     <section className="section value-proposition">
       <div className="container">
         <ScrollReveal className="section-header">
-          <span className="section-badge">Why Brevio</span>
+          <span className="section-badge">Why Chesly</span>
           <h2 className="section-title">
             Stop drowning in
             <br />
@@ -57,7 +57,7 @@ export function ValueProposition() {
           </h2>
           <p className="section-description">
             The average person checks 10+ apps for messages daily.
-            Brevio brings everything together so you can focus on what matters.
+            Chesly brings everything together so you can focus on what matters.
           </p>
         </ScrollReveal>
 

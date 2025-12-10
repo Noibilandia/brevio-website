@@ -41,7 +41,7 @@ export function ProblemSolution() {
                       <line x1="6" y1="6" x2="18" y2="18"/>
                     </svg>
                   </span>
-                  Without Brevio
+                  Without Chesly
                 </h4>
                 <ul className="ps-list">
                   {problems.map((item, i) => (
@@ -57,7 +57,7 @@ export function ProblemSolution() {
                       <polyline points="20 6 9 17 4 12"/>
                     </svg>
                   </span>
-                  With Brevio
+                  With Chesly
                 </h4>
                 <ul className="ps-list">
                   {solutions.map((item, i) => (

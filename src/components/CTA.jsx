@@ -26,7 +26,7 @@ export function CTA() {
             <span className="text-gradient">your time?</span>
           </h2>
           <p className="cta-description">
-            Download Brevio free and unify all your messages today.
+            Download Chesly free and unify all your messages today.
             Upgrade to Pro anytime for AI-powered features.
           </p>
           <div className="cta-actions">

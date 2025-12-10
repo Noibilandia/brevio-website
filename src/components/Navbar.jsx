@@ -58,7 +58,7 @@ export function Navbar({ theme, toggleTheme }) {
               </defs>
             </svg>
           </div>
-          <span className="logo-text">Brevio</span>
+          <span className="logo-text">Chesly</span>
         </a>
 
         <div className={`navbar-links ${mobileMenuOpen ? 'open' : ''}`}>

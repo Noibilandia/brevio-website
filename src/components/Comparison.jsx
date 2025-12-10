@@ -44,12 +44,12 @@ export function Comparison() {
         <ScrollReveal className="section-header">
           <span className="section-badge">Comparison</span>
           <h2 className="section-title">
-            Brevio vs
+            Chesly vs
             <br />
             <span className="text-gradient">app switching</span>
           </h2>
           <p className="section-description">
-            Stop juggling multiple apps. See why Brevio is the smarter way
+            Stop juggling multiple apps. See why Chesly is the smarter way
             to manage all your messages.
           </p>
         </ScrollReveal>
@@ -61,7 +61,7 @@ export function Comparison() {
                 <th className="feature-col">Feature</th>
                 <th className="brevio-col">
                   <div className="col-header brevio-header">
-                    <span className="col-logo">Brevio</span>
+                    <span className="col-logo">Chesly</span>
                     <span className="col-badge">Recommended</span>
                   </div>
                 </th>
@@ -87,7 +87,7 @@ export function Comparison() {
         <ScrollReveal className="comparison-cta" delay={500}>
           <p>Ready to simplify your message chaos?</p>
           <a href="#pricing" className="btn btn-primary btn-lg">
-            Try Brevio Free
+            Try Chesly Free
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <line x1="5" y1="12" x2="19" y2="12"/>
               <polyline points="12 5 19 12 12 19"/>

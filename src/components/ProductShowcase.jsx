@@ -38,7 +38,7 @@ export function ProductShowcase() {
           </h2>
           <p className="section-description">
             Every pixel crafted for clarity. Every feature designed
-            to save you time. See Brevio in action.
+            to save you time. See Chesly in action.
           </p>
         </ScrollReveal>
 
