@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useTheme } from './hooks/useTheme';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -18,7 +17,6 @@ import { ScrollToTop } from './components/ScrollToTop';
 import { VideoModal } from './components/VideoModal';
 
 function App() {
-  const { theme, toggleTheme } = useTheme();
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   const openVideoModal = () => setIsVideoModalOpen(true);
@@ -31,7 +29,7 @@ function App() {
         Skip to main content
       </a>
 
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
+      <Navbar />
       <main id="main-content">
         <Hero onWatchDemo={openVideoModal} />
         <ValueProposition />

@@ -8,11 +8,11 @@ export function Hero({ onWatchDemo }) {
   const { os, isMobile } = useDeviceDetect();
   const downloadInfo = getDownloadInfo(os);
   const apps = [
-    { name: 'Slack', color: '#4A154B', icon: 'S' },
-    { name: 'Gmail', color: '#EA4335', icon: 'G' },
-    { name: 'WhatsApp', color: '#25D366', icon: 'W' },
-    { name: 'Discord', color: '#5865F2', icon: 'D' },
-    { name: 'Teams', color: '#6264A7', icon: 'T' },
+    { name: 'Slack', logo: '/slack-logo.png', color: '#4A154B' },
+    { name: 'Gmail', logo: '/gmail-logo.png', color: '#EA4335' },
+    { name: 'WhatsApp', logo: '/whatsapp-logo.png', color: '#25D366' },
+    { name: 'Discord', logo: '/discord-logo.png', color: '#5865F2' },
+    { name: 'Teams', logo: '/teams-logo.png', color: '#6264A7' },
   ];
 
   return (
@@ -109,12 +109,11 @@ export function Hero({ onWatchDemo }) {
                   key={app.name}
                   className="floating-app"
                   style={{
-                    '--app-color': app.color,
                     '--delay': `${i * 0.5}s`,
                     '--position': i,
                   }}
                 >
-                  <span>{app.icon}</span>
+                  <img src={app.logo} alt={app.name} className="app-logo-img" />
                 </div>
               ))}
             </div>
@@ -155,7 +154,9 @@ export function Hero({ onWatchDemo }) {
 
                     <div className="app-messages">
                       <div className="message-row unread">
-                        <div className="msg-avatar slack">S</div>
+                        <div className="msg-avatar">
+                          <img src="/slack-logo.png" alt="Slack" className="app-logo-img" />
+                        </div>
                         <div className="msg-content">
                           <div className="msg-header">
                             <span className="msg-sender">Alex from Design</span>
@@ -166,7 +167,9 @@ export function Hero({ onWatchDemo }) {
                       </div>
 
                       <div className="message-row unread">
-                        <div className="msg-avatar gmail">G</div>
+                        <div className="msg-avatar">
+                          <img src="/gmail-logo.png" alt="Gmail" className="app-logo-img" />
+                        </div>
                         <div className="msg-content">
                           <div className="msg-header">
                             <span className="msg-sender">Sarah Chen</span>
@@ -177,7 +180,9 @@ export function Hero({ onWatchDemo }) {
                       </div>
 
                       <div className="message-row">
-                        <div className="msg-avatar whatsapp">W</div>
+                        <div className="msg-avatar">
+                          <img src="/whatsapp-logo.png" alt="WhatsApp" className="app-logo-img" />
+                        </div>
                         <div className="msg-content">
                           <div className="msg-header">
                             <span className="msg-sender">Team Lunch</span>
@@ -188,7 +193,9 @@ export function Hero({ onWatchDemo }) {
                       </div>
 
                       <div className="message-row">
-                        <div className="msg-avatar discord">D</div>
+                        <div className="msg-avatar">
+                          <img src="/discord-logo.png" alt="Discord" className="app-logo-img" />
+                        </div>
                         <div className="msg-content">
                           <div className="msg-header">
                             <span className="msg-sender">#dev-general</span>
@@ -236,9 +243,11 @@ export function Hero({ onWatchDemo }) {
               <div
                 key={app.name}
                 className="trusted-logo"
-                style={{ '--app-color': app.color, '--index': index }}
+                style={{ '--index': index }}
               >
-                <span className="logo-icon">{app.icon}</span>
+                <div className="logo-icon">
+                  <img src={app.logo} alt={app.name} className="app-logo-img" />
+                </div>
                 <span className="logo-name">{app.name}</span>
               </div>
             ))}
