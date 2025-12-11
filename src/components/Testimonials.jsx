@@ -2,9 +2,18 @@ import { useState, useEffect, useCallback } from 'react';
 import { ScrollReveal } from '../hooks/useScrollReveal';
 import './Testimonials.css';
 
+const getItemsPerView = (width) => {
+  if (width <= 768) return 1;
+  if (width <= 1024) return 2;
+  return 3;
+};
+
 export function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [itemsPerView, setItemsPerView] = useState(() => (
+    typeof window !== 'undefined' ? getItemsPerView(window.innerWidth) : 3
+  ));
 
   const testimonials = [
     {
@@ -57,7 +66,6 @@ export function Testimonials() {
     },
   ];
 
-  const itemsPerView = 3;
   const maxIndex = Math.max(0, testimonials.length - itemsPerView);
 
   const goToNext = useCallback(() => {
@@ -74,6 +82,22 @@ export function Testimonials() {
     const interval = setInterval(goToNext, 5000);
     return () => clearInterval(interval);
   }, [isAutoPlaying, goToNext]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const next = getItemsPerView(window.innerWidth);
+      setItemsPerView((prev) => (prev === next ? prev : next));
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (currentIndex > maxIndex) {
+      setCurrentIndex(maxIndex);
+    }
+  }, [currentIndex, maxIndex]);
 
   const handleMouseEnter = () => setIsAutoPlaying(false);
   const handleMouseLeave = () => setIsAutoPlaying(true);
