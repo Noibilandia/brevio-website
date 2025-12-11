@@ -223,10 +223,13 @@
   padding: 8px;
 }
 
-.floating-app .app-logo-img {
+.floating-app .app-logo-img,
+.msg-avatar .app-logo-img,
+.trusted-logo .logo-icon .app-logo-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  display: block;
 }
 
 .floating-app:nth-child(1) { top: 5%; left: -10%; }
@@ -402,12 +405,6 @@
   flex-shrink: 0;
   padding: 6px;
   background: rgba(255, 255, 255, 0.05);
-}
-
-.msg-avatar .app-logo-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 
 .msg-content {
