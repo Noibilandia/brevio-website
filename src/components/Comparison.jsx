@@ -76,8 +76,8 @@ export function Comparison() {
               {features.map((feature, index) => (
                 <tr key={feature.name} style={{ animationDelay: `${index * 50}ms` }}>
                   <td className="feature-name">{feature.name}</td>
-                  <td className="brevio-value">{renderValue(feature.brevio)}</td>
-                  <td className="others-value">{renderValue(feature.others)}</td>
+                  <td className="brevio-value" data-label="Chesly">{renderValue(feature.brevio)}</td>
+                  <td className="others-value" data-label="Using 10+ Apps">{renderValue(feature.others)}</td>
                 </tr>
               ))}
             </tbody>
