@@ -41,7 +41,7 @@ export function ValueProposition() {
         </svg>
       ),
       title: 'Private & Secure',
-      description: 'Your messages stay yours. End-to-end encryption, SOC2 compliant, GDPR ready.',
+      description: 'Your messages stay yours. End-to-end encryption, and AI processing stays on our own servers.',
     },
   ];
 

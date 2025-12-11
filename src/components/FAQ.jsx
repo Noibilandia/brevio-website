@@ -16,7 +16,7 @@ export function FAQ() {
     },
     {
       question: 'Is my message data secure and private?',
-      answer: 'Security is our top priority. We use end-to-end encryption, are SOC2 Type II certified, and GDPR compliant. Your messages are processed securely and never used to train AI models. We don\'t store message content longer than necessary for the service.',
+      answer: 'Security is our top priority. Chesly uses end-to-end encryption, and AI summaries are processed on our servers so your data never leaves our infrastructure or trains third‑party models.',
     },
     {
       question: 'Can I reply to messages directly from Chesly?',
