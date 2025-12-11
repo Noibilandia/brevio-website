@@ -13,9 +13,10 @@
   transition: filter var(--transition-fast);
 }
 
-/* App logos - keep original colors */
+/* App logos - invert for dark theme */
 .app-logo-img {
-  /* No filter - keep original colors */
+  filter: brightness(0) invert(1);
+  mix-blend-mode: normal;
 }
 
 /* Platform Badges */
