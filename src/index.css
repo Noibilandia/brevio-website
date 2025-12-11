@@ -143,6 +143,7 @@ html {
   scroll-padding-top: 100px; /* Offset for sticky navbar */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* Skip Link for Accessibility */
@@ -180,6 +181,7 @@ body {
 #root {
   min-height: 100vh;
   animation: pageLoad 0.6s ease-out;
+  overflow-x: hidden;
 }
 
 @keyframes pageLoad {
