@@ -664,8 +664,14 @@
   }
 
   .floating-apps {
-    display: none;
+    display: block;
   }
+
+  .floating-app:nth-child(1) { top: -6%; left: 0%; }
+  .floating-app:nth-child(2) { top: 8%; right: 0%; }
+  .floating-app:nth-child(3) { top: 52%; left: -8%; }
+  .floating-app:nth-child(4) { bottom: 30%; right: -6%; }
+  .floating-app:nth-child(5) { bottom: -4%; left: 8%; }
 
   .app-store-badges {
     flex-direction: column;
