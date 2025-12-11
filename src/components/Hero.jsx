@@ -1,14 +1,19 @@
 import { ScrollReveal } from '../hooks/useScrollReveal';
 import { useDeviceDetect, getDownloadInfo } from '../hooks/useDeviceDetect';
 import { AppStoreBadges } from './SmartDownload';
-import { AppLogo } from './AppLogo';
 import './Hero.css';
 import './SmartDownload.css';
 
 export function Hero({ onWatchDemo }) {
   const { os, isMobile } = useDeviceDetect();
   const downloadInfo = getDownloadInfo(os);
-  const apps = ['Slack', 'Gmail', 'WhatsApp', 'Discord', 'Teams'];
+  const apps = [
+    { name: 'Slack', logo: '/slack-logo.png' },
+    { name: 'Gmail', logo: '/gmail-logo.png' },
+    { name: 'WhatsApp', logo: '/whatsapp-logo.png' },
+    { name: 'Discord', logo: '/discord-logo.png' },
+    { name: 'Teams', logo: '/teams-logo.png' },
+  ];
 
   return (
     <section className="hero">
@@ -101,14 +106,14 @@ export function Hero({ onWatchDemo }) {
             <div className="floating-apps">
               {apps.map((app, i) => (
                 <div
-                  key={app}
+                  key={app.name}
                   className="floating-app"
                   style={{
                     '--delay': `${i * 0.5}s`,
                     '--position': i,
                   }}
                 >
-                  <AppLogo name={app} className="app-logo-img" />
+                  <img src={app.logo} alt={app.name} className="app-logo-img" />
                 </div>
               ))}
             </div>
@@ -150,7 +155,7 @@ export function Hero({ onWatchDemo }) {
                     <div className="app-messages">
                       <div className="message-row unread">
                         <div className="msg-avatar">
-                          <AppLogo name="Slack" className="app-logo-img" />
+                          <img src="/slack-logo.png" alt="Slack" className="app-logo-img" />
                         </div>
                         <div className="msg-content">
                           <div className="msg-header">
@@ -163,7 +168,7 @@ export function Hero({ onWatchDemo }) {
 
                       <div className="message-row unread">
                         <div className="msg-avatar">
-                          <AppLogo name="Gmail" className="app-logo-img" />
+                          <img src="/gmail-logo.png" alt="Gmail" className="app-logo-img" />
                         </div>
                         <div className="msg-content">
                           <div className="msg-header">
@@ -176,7 +181,7 @@ export function Hero({ onWatchDemo }) {
 
                       <div className="message-row">
                         <div className="msg-avatar">
-                          <AppLogo name="WhatsApp" className="app-logo-img" />
+                          <img src="/whatsapp-logo.png" alt="WhatsApp" className="app-logo-img" />
                         </div>
                         <div className="msg-content">
                           <div className="msg-header">
@@ -189,7 +194,7 @@ export function Hero({ onWatchDemo }) {
 
                       <div className="message-row">
                         <div className="msg-avatar">
-                          <AppLogo name="Discord" className="app-logo-img" />
+                          <img src="/discord-logo.png" alt="Discord" className="app-logo-img" />
                         </div>
                         <div className="msg-content">
                           <div className="msg-header">
@@ -236,14 +241,14 @@ export function Hero({ onWatchDemo }) {
           <div className="trusted-logos">
             {apps.map((app, index) => (
               <div
-                key={app}
+                key={app.name}
                 className="trusted-logo"
                 style={{ '--index': index }}
               >
                 <div className="logo-icon">
-                  <AppLogo name={app} className="app-logo-img" />
+                  <img src={app.logo} alt={app.name} className="app-logo-img" />
                 </div>
-                <span className="logo-name">{app}</span>
+                <span className="logo-name">{app.name}</span>
               </div>
             ))}
             <div className="trusted-logo more" style={{ '--index': apps.length }}>
