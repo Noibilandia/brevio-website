@@ -66,7 +66,7 @@ export function ValueProposition() {
             <ScrollReveal
               key={value.title}
               className="value-card card"
-              delay={index * 100}
+              delay={200 + index * 100}
             >
               <div className="value-icon">{value.icon}</div>
               <h3 className="value-title">{value.title}</h3>

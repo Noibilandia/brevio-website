@@ -465,16 +465,76 @@ img {
 .delay-700 { animation-delay: 700ms; }
 .delay-800 { animation-delay: 800ms; }
 
-/* Intersection Observer Animation */
+/* Advanced Animation System */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transform: translateY(40px) scale(0.95);
+  filter: blur(10px);
+  transition:
+    opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* Hero-specific animation - dramatic entrance */
+.hero-content.reveal {
+  transform: translateY(60px) scale(0.9);
+  filter: blur(15px);
+}
+
+.hero-content.reveal.visible {
+  animation: heroEntrance 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes heroEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.9);
+    filter: blur(15px);
+  }
+  60% {
+    opacity: 0.8;
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Visual elements - slide in from side with bounce */
+.hero-visual.reveal {
+  opacity: 0;
+  transform: translateX(80px) translateY(20px) scale(0.85) rotateY(15deg);
+  filter: blur(20px);
+}
+
+.hero-visual.reveal.visible {
+  animation: visualEntrance 1.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes visualEntrance {
+  0% {
+    opacity: 0;
+    transform: translateX(80px) translateY(20px) scale(0.85) rotateY(15deg);
+    filter: blur(20px);
+  }
+  50% {
+    opacity: 0.5;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1) rotateY(0deg);
+    filter: blur(0);
+  }
 }
 
 /* Button Styles */
@@ -710,4 +770,160 @@ img {
   background: var(--color-border);
   border: none;
   margin: var(--space-8) 0;
+}
+
+/* Card animations - staggered pop-in effect */
+.feature-card.reveal,
+.value-card.reveal,
+.pricing-card.reveal {
+  opacity: 0;
+  transform: translateY(30px) scale(0.8) rotateX(10deg);
+  filter: blur(8px);
+}
+
+.feature-card.reveal.visible,
+.value-card.reveal.visible,
+.pricing-card.reveal.visible {
+  animation: cardPopIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes cardPopIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8) rotateX(10deg);
+    filter: blur(8px);
+  }
+  60% {
+    transform: translateY(-5px) scale(1.02) rotateX(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotateX(0deg);
+    filter: blur(0);
+  }
+}
+
+/* Section headers - elegant fade with scale */
+.section-header.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.92);
+  filter: blur(12px);
+}
+
+.section-header.reveal.visible {
+  animation: headerFadeIn 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes headerFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.92);
+    filter: blur(12px);
+  }
+  70% {
+    opacity: 0.9;
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Step cards - slide from alternating sides */
+.step-card.reveal:nth-child(odd) {
+  opacity: 0;
+  transform: translateX(-60px) translateY(20px) scale(0.9);
+  filter: blur(10px);
+}
+
+.step-card.reveal:nth-child(even) {
+  opacity: 0;
+  transform: translateX(60px) translateY(20px) scale(0.9);
+  filter: blur(10px);
+}
+
+.step-card.reveal.visible {
+  animation: stepSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes stepSlideIn {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Floating app icons - gentle bounce in */
+.floating-app {
+  animation: floatBounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-delay: calc(var(--delay) + 0.8s);
+}
+
+@keyframes floatBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.3) rotate(-15deg);
+  }
+  60% {
+    transform: translateY(-8px) scale(1.1) rotate(3deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+/* Notification popups - slide with elastic bounce */
+.hero-notification {
+  animation: notificationSlide 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.notification-1 {
+  animation-delay: 1.2s;
+}
+
+.notification-2 {
+  animation-delay: 1.6s;
+}
+
+@keyframes notificationSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(100px) scale(0.7);
+    filter: blur(10px);
+  }
+  60% {
+    transform: translateX(-10px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Trusted logos - sequential fade with slight rotation */
+.trusted-logo {
+  animation: logoFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--index, 0) * 0.08s + 1.4s);
+}
+
+@keyframes logoFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px) scale(0.8) rotate(-5deg);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+    filter: blur(0);
+  }
 }

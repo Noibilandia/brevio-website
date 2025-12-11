@@ -30,7 +30,7 @@ export function Hero({ onWatchDemo }) {
       </div>
 
       <div className="container hero-container">
-        <ScrollReveal className="hero-content" delay={200}>
+        <ScrollReveal className="hero-content" delay={150}>
           <div className="hero-badge">
             <span className="badge-dot"></span>
             <span>AI-Powered Unified Inbox</span>
@@ -113,7 +113,7 @@ export function Hero({ onWatchDemo }) {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal className="hero-visual" delay={700}>
+        <ScrollReveal className="hero-visual" delay={500}>
           <div className="hero-phone-container">
             {/* Floating app icons */}
             <div className="floating-apps">
@@ -269,20 +269,20 @@ export function Hero({ onWatchDemo }) {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal className="hero-trusted" delay={1200}>
+        <ScrollReveal className="hero-trusted" delay={900}>
           <p className="trusted-label">Works with all your favorite apps</p>
           <div className="trusted-logos">
-            {apps.map((app) => (
+            {apps.map((app, index) => (
               <div
                 key={app.name}
                 className="trusted-logo"
-                style={{ '--app-color': app.color }}
+                style={{ '--app-color': app.color, '--index': index }}
               >
                 <span className="logo-icon">{app.icon}</span>
                 <span className="logo-name">{app.name}</span>
               </div>
             ))}
-            <div className="trusted-logo more">
+            <div className="trusted-logo more" style={{ '--index': apps.length }}>
               <span className="logo-icon">+</span>
               <span className="logo-name">50 more</span>
             </div>

@@ -115,7 +115,7 @@ export function Features() {
             <ScrollReveal
               key={feature.title}
               className="feature-card card"
-              delay={index * 150}
+              delay={200 + index * 120}
             >
               <div
                 className="feature-icon"
