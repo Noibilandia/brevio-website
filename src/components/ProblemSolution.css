@@ -192,43 +192,43 @@
 }
 
 .ps-app--slack {
-  --ps-x: -142px;
-  --ps-y: -92px;
+  --ps-x: -128px;
+  --ps-y: -82px;
   --ps-float-delay: -0.8s;
   --ps-connect-delay: 0ms;
 }
 
 .ps-app--gmail {
-  --ps-x: 154px;
-  --ps-y: -78px;
+  --ps-x: 128px;
+  --ps-y: -70px;
   --ps-float-delay: -1.6s;
   --ps-connect-delay: 70ms;
 }
 
 .ps-app--whatsapp {
-  --ps-x: -168px;
-  --ps-y: 56px;
+  --ps-x: -132px;
+  --ps-y: 60px;
   --ps-float-delay: -2.3s;
   --ps-connect-delay: 140ms;
 }
 
 .ps-app--discord {
-  --ps-x: 168px;
-  --ps-y: 64px;
+  --ps-x: 132px;
+  --ps-y: 70px;
   --ps-float-delay: -1.1s;
   --ps-connect-delay: 210ms;
 }
 
 .ps-app--teams {
-  --ps-x: -58px;
-  --ps-y: 170px;
+  --ps-x: -62px;
+  --ps-y: 128px;
   --ps-float-delay: -2.8s;
   --ps-connect-delay: 280ms;
 }
 
 .ps-app--telegram {
-  --ps-x: 62px;
-  --ps-y: -176px;
+  --ps-x: 70px;
+  --ps-y: -128px;
   --ps-float-delay: -0.4s;
   --ps-connect-delay: 350ms;
 }
