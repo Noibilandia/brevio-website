@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Hero } from '../components/Hero';
 import { ValueProposition } from '../components/ValueProposition';
-import { ProblemSolution } from '../components/ProblemSolution';
 import { Features } from '../components/Features';
 import { ProductShowcase } from '../components/ProductShowcase';
 import { HowItWorks } from '../components/HowItWorks';
@@ -34,7 +33,6 @@ export function Home() {
     <>
       <Hero onWatchDemo={openVideoModal} />
       <ValueProposition />
-      <ProblemSolution />
       <Features />
       <ProductShowcase />
       <HowItWorks />
@@ -47,4 +45,3 @@ export function Home() {
     </>
   );
 }
-
