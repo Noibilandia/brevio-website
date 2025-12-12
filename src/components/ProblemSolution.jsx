@@ -70,46 +70,49 @@ export function ProblemSolution() {
 
           <ScrollReveal className="ps-visual" delay={200}>
             <div className="ps-visual-container">
-              <div className="ps-visual-before">
-                <div className="chaos-grid">
-                  {[...Array(6)].map((_, i) => (
-                    <div key={i} className="chaos-item" style={{ animationDelay: `${i * 0.2}s` }}>
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                      </svg>
+              <div className="ps-merge" aria-hidden="true">
+                <div className="ps-merge-stage">
+                  <div className="ps-merge-center">
+                    <img src="/cheslylogo.png" alt="" className="ps-merge-logo" />
+                  </div>
+
+                  <div className="ps-app ps-app--slack">
+                    <div className="ps-app-inner">
+                      <img src="/slack-logo.png" alt="" loading="lazy" />
                     </div>
-                  ))}
-                </div>
-                <span className="visual-label">Before</span>
-              </div>
-              <div className="ps-visual-arrow">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <line x1="5" y1="12" x2="19" y2="12"/>
-                  <polyline points="12 5 19 12 12 19"/>
-                </svg>
-              </div>
-              <div className="ps-visual-after">
-                <div className="order-grid">
-                  <div className="order-main">
-                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="32" height="32" rx="8" fill="url(#chesly-ps-gradient)"/>
-                      <path d="M8 16h16M8 11h12M8 21h8" stroke="white" strokeWidth="2" strokeLinecap="round"/>
-                      <defs>
-                        <linearGradient id="chesly-ps-gradient" x1="0" y1="0" x2="32" y2="32">
-                          <stop offset="0" stopColor="#22d3ee"/>
-                          <stop offset="0.5" stopColor="#06b6d4"/>
-                          <stop offset="1" stopColor="#0891b2"/>
-                        </linearGradient>
-                      </defs>
-                    </svg>
                   </div>
-                  <div className="order-side">
-                    <div className="order-item"></div>
-                    <div className="order-item"></div>
-                    <div className="order-item"></div>
+                  <div className="ps-app ps-app--gmail">
+                    <div className="ps-app-inner">
+                      <img src="/gmail-logo.png" alt="" loading="lazy" />
+                    </div>
+                  </div>
+                  <div className="ps-app ps-app--whatsapp">
+                    <div className="ps-app-inner">
+                      <img src="/whatsapp-logo.png" alt="" loading="lazy" />
+                    </div>
+                  </div>
+                  <div className="ps-app ps-app--discord">
+                    <div className="ps-app-inner">
+                      <img src="/discord-logo.png" alt="" loading="lazy" />
+                    </div>
+                  </div>
+                  <div className="ps-app ps-app--teams">
+                    <div className="ps-app-inner">
+                      <img src="/teams-logo.png" alt="" loading="lazy" />
+                    </div>
+                  </div>
+                  <div className="ps-app ps-app--telegram">
+                    <div className="ps-app-inner">
+                      <img src="/telegram-logo.png" alt="" loading="lazy" />
+                    </div>
                   </div>
                 </div>
-                <span className="visual-label">After</span>
+
+                <div className="ps-merge-caption">
+                  <span className="ps-merge-caption-left">Scattered apps</span>
+                  <span className="ps-merge-caption-dot" aria-hidden="true"></span>
+                  <span className="ps-merge-caption-right">Unified in Chesly</span>
+                </div>
               </div>
             </div>
           </ScrollReveal>
