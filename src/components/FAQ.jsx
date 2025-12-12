@@ -11,12 +11,12 @@ export function FAQ() {
       answer: 'Chesly integrates with 10+ apps including Slack, Gmail, WhatsApp, Telegram, Discord, and Microsoft Teams. We\'re actively adding more integrations during development.',
     },
     {
-      question: 'How does the AI summarization work?',
-      answer: 'Our AI reads through long message threads and extracts the key points, action items, and important decisions. You can customize what the AI focuses on—urgent requests, mentions of you, deadlines, or specific topics you care about.',
+      question: 'What can Chesly\'s AI do?',
+      answer: 'Chesly\'s AI helps you stay on top of messages by extracting highlights and action items, summarizing long threads, and learning what\'s urgent based on your rules. You control what it focuses on—mentions, deadlines, key senders, and topics you care about.',
     },
     {
       question: 'Is my message data secure and private?',
-      answer: 'Security is our top priority. Chesly uses end-to-end encryption, and AI summaries are processed on our servers so your data never leaves our infrastructure or trains third‑party models.',
+      answer: 'Security is our top priority. Chesly uses end-to-end encryption, and AI data is processed on our servers so your data never leaves our infrastructure or trains third‑party models.',
     },
     {
       question: 'Can I reply to messages directly from Chesly?',
@@ -24,7 +24,7 @@ export function FAQ() {
     },
     {
       question: 'How does the free trial work?',
-      answer: 'Start with a 14-day free trial of our Pro plan—no credit card required. You\'ll have access to unlimited AI summaries, all integrations, and smart notification features. Downgrade to Free or upgrade to Team anytime.',
+      answer: 'Start with a 14-day free trial of our Pro plan—no credit card required. You\'ll have access to Pro features like AI insights, smart notifications, and AI-powered search, plus all integrations. Downgrade to Free or upgrade to Team anytime.',
     },
     {
       question: 'Will Chesly work with my company\'s existing tools?',
@@ -32,15 +32,15 @@ export function FAQ() {
     },
     {
       question: 'Can I customize which notifications I receive?',
-      answer: 'Absolutely. You can set rules based on sender, app, keywords, time of day, and more. Want AI summaries for Slack but instant notifications for email from your boss? You can configure that.',
+      answer: 'Absolutely. You can set rules based on sender, app, keywords, time of day, and more. Want AI insights for Slack but instant notifications for email from your boss? You can configure that.',
     },
     {
       question: 'Does Chesly have mobile apps?',
-      answer: 'Yes! We have native apps for iOS and Android that sync seamlessly with the desktop version. Your unified inbox and AI summaries are available wherever you are.',
+      answer: 'Yes! We have native apps for iOS and Android that sync seamlessly with the desktop version. Your unified inbox and AI features are available wherever you are.',
     },
     {
       question: 'How is Chesly different from email clients with unified inbox?',
-      answer: 'Traditional unified inboxes just aggregate messages. Chesly goes further with AI summarization, smart notification batching, cross-app search, and the ability to reply to any platform from one place. Plus, we support way more than just email.',
+      answer: 'Traditional unified inboxes just aggregate messages. Chesly goes further with AI features, smart notification batching, cross-app search, and the ability to reply to any platform from one place. Plus, we support way more than just email.',
     },
     {
       question: 'Can I use Chesly with my team?',

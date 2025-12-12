@@ -1,4 +1,5 @@
 import { ScrollReveal } from '../hooks/useScrollReveal';
+import { AiIcon } from './icons/AiIcon';
 import './HowItWorks.css';
 
 export function HowItWorks() {
@@ -17,7 +18,7 @@ export function HowItWorks() {
     {
       number: '02',
       title: 'Set your preferences',
-      description: 'Tell Chesly what\'s important. Set rules for AI summaries, notification priorities, and smart filters.',
+      description: 'Tell Chesly what\'s important. Set rules for AI insights, notification priorities, and smart filters.',
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <circle cx="12" cy="12" r="3"/>
@@ -28,12 +29,9 @@ export function HowItWorks() {
     {
       number: '03',
       title: 'Let AI do the work',
-      description: 'Chesly\'s AI reads and summarizes your messages, highlighting what needs your attention right now.',
+      description: 'Chesly\'s AI highlights what matters, pulls out action items, and summarizes long threads when you need it.',
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/>
-          <path d="M12 12v8M8 18h8"/>
-        </svg>
+        <AiIcon />
       ),
     },
     {

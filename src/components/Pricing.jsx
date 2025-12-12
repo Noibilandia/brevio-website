@@ -17,7 +17,7 @@ export function Pricing() {
         { text: 'Basic search', included: true },
         { text: 'Mobile & desktop apps', included: true },
         { text: '30-day message history', included: true },
-        { text: 'AI summaries', included: false },
+        { text: 'AI features', included: false },
         { text: 'Smart notifications', included: false },
       ],
       cta: 'Download Free',
@@ -30,7 +30,7 @@ export function Pricing() {
       priceLabel: null,
       features: [
         { text: 'Everything in Free', included: true },
-        { text: 'Unlimited AI summaries', included: true, highlight: true },
+        { text: 'Unlimited AI insights', included: true, highlight: true },
         { text: 'Smart AI notifications', included: true, highlight: true },
         { text: 'AI-powered search', included: true, highlight: true },
         { text: 'Custom filter rules', included: true },
@@ -71,7 +71,7 @@ export function Pricing() {
           </h2>
           <p className="section-description">
             The unified inbox is free forever. Upgrade to Pro
-            to unlock AI summaries and smart notifications.
+            to unlock AI insights, smart notifications, and AI-powered search.
           </p>
         </ScrollReveal>
 

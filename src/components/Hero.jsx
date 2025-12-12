@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { ScrollReveal } from '../hooks/useScrollReveal';
 import { useDeviceDetect, getDownloadInfo } from '../hooks/useDeviceDetect';
 import { AppStoreBadges } from './SmartDownload';
+import { AiIcon } from './icons/AiIcon';
 import './Hero.css';
 import './SmartDownload.css';
 
@@ -140,7 +141,7 @@ export function Hero({ onWatchDemo }) {
 
           <p className="hero-description">
             Connect Slack, Email, WhatsApp, Telegram, Discord & more into one inbox.
-            Upgrade to Pro for AI summaries that save time every week.
+            Upgrade to Pro for AI features that save time every week.
           </p>
 
           <div className="hero-actions">
@@ -319,10 +320,7 @@ export function Hero({ onWatchDemo }) {
                         <span>Inbox</span>
                       </div>
                       <div className="nav-tab">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/>
-                          <path d="M12 12v8M8 18h8"/>
-                        </svg>
+                        <AiIcon />
                         <span>AI</span>
                       </div>
                       <div className="nav-tab">

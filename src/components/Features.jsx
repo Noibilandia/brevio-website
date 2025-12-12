@@ -1,4 +1,5 @@
 import { ScrollReveal } from '../hooks/useScrollReveal';
+import { AiIcon } from './icons/AiIcon';
 import './Features.css';
 
 export function Features() {
@@ -16,13 +17,10 @@ export function Features() {
     },
     {
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/>
-          <path d="M12 12v8M8 18h8"/>
-        </svg>
+        <AiIcon />
       ),
-      title: 'AI Summarization',
-      description: 'Long threads? Get the gist in seconds with AI-powered summaries.',
+      title: 'AI Insights',
+      description: 'Summaries are just the start—get highlights, action items, and smart suggestions in seconds.',
       color: '#22d3ee',
     },
     {

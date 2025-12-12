@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ScrollReveal } from '../hooks/useScrollReveal';
+import { AiIcon } from './icons/AiIcon';
 import './ProductShowcase.css';
 
 export function ProductShowcase() {
@@ -11,8 +12,8 @@ export function ProductShowcase() {
       description: 'All your messages in one beautiful, organized view',
     },
     {
-      title: 'AI Summaries',
-      description: 'Get the key points from any conversation instantly',
+      title: 'AI Insights',
+      description: 'Highlights, action items, and summaries—instantly',
     },
     {
       title: 'Smart Filters',
@@ -110,7 +111,7 @@ export function ProductShowcase() {
                   {activeView === 1 && (
                     <div className="screen-summary">
                       <div className="screen-header">
-                        <span className="screen-title">AI Summary</span>
+                        <span className="screen-title">AI Insights</span>
                       </div>
                       <div className="summary-card">
                         <div className="summary-source">
@@ -219,10 +220,7 @@ export function ProductShowcase() {
                       </svg>
                     </div>
                     <div className={`nav-item ${activeView === 1 ? 'active' : ''}`}>
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/>
-                        <path d="M12 12v8M8 18h8"/>
-                      </svg>
+                      <AiIcon />
                     </div>
                     <div className={`nav-item ${activeView === 2 ? 'active' : ''}`}>
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -247,12 +245,9 @@ export function ProductShowcase() {
               </div>
               <div className="feature-card card-2">
                 <div className="feature-icon ai">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/>
-                    <path d="M12 12v8M8 18h8"/>
-                  </svg>
+                  <AiIcon />
                 </div>
-                <span>AI-Powered Summaries</span>
+                <span>AI-Powered Insights</span>
               </div>
               <div className="feature-card card-3">
                 <div className="feature-icon time">

@@ -4,7 +4,7 @@ import './Comparison.css';
 export function Comparison() {
   const features = [
     { name: 'All messages in one place', chesly: true, others: false },
-    { name: 'AI-powered summaries', chesly: true, others: false },
+    { name: 'AI-powered insights', chesly: true, others: false },
     { name: 'Smart notification batching', chesly: true, others: false },
     { name: 'Reply from unified inbox', chesly: true, others: false },
     { name: 'Cross-app search', chesly: true, others: 'Limited' },

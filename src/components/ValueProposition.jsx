@@ -1,4 +1,5 @@
 import { ScrollReveal } from '../hooks/useScrollReveal';
+import { AiIcon } from './icons/AiIcon';
 import './ValueProposition.css';
 
 export function ValueProposition() {
@@ -15,14 +16,10 @@ export function ValueProposition() {
     },
     {
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/>
-          <path d="M12 12v8"/>
-          <path d="M8 18h8"/>
-        </svg>
+        <AiIcon />
       ),
-      title: 'AI Summaries',
-      description: 'Get instant AI-powered summaries of long threads. Know what matters in seconds.',
+      title: 'AI Insights',
+      description: 'Get highlights, action items, and summaries of long threads. Know what matters in seconds.',
     },
     {
       icon: (
