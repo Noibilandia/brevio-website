@@ -65,7 +65,7 @@ const getIcon = (iconType) => {
 };
 
 export function SmartDownloadButton({ className = '', showAllPlatforms = false }) {
-  const { os, isMobile } = useDeviceDetect();
+  const { os } = useDeviceDetect();
   const downloadInfo = getDownloadInfo(os);
 
   if (showAllPlatforms) {

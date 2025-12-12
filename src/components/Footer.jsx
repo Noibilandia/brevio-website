@@ -1,11 +1,12 @@
 import { ScrollReveal } from '../hooks/useScrollReveal';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 export function Footer() {
   const footerLinks = {
     Product: [
-      { label: 'Features', href: '#features' },
-      { label: 'Pricing', href: '#pricing' },
+      { label: 'Features', to: '/#features' },
+      { label: 'Pricing', to: '/#pricing' },
       { label: 'Integrations', href: '#' },
       { label: 'Changelog', href: '#' },
       { label: 'Roadmap', href: '#' },
@@ -23,10 +24,11 @@ export function Footer() {
       { label: 'Status', href: '#' },
     ],
     Legal: [
-      { label: 'Privacy', href: '#' },
-      { label: 'Terms', href: '#' },
-      { label: 'Security', href: '#' },
-      { label: 'GDPR', href: '#' },
+      { label: 'Privacy', to: '/privacy' },
+      { label: 'Terms', to: '/terms' },
+      { label: 'Cookies', to: '/cookies' },
+      { label: 'Security', to: '/security' },
+      { label: 'GDPR', to: '/gdpr' },
     ],
   };
 
@@ -65,12 +67,12 @@ export function Footer() {
       <div className="container">
         <ScrollReveal className="footer-top">
           <div className="footer-brand">
-            <a href="#" className="footer-logo">
+            <Link to="/" className="footer-logo">
               <div className="logo-icon">
                 <img src="/cheslylogo.png" alt="Chesly Logo" />
               </div>
               <span>Chesly</span>
-            </a>
+            </Link>
             <p className="footer-tagline">
               One inbox. Zero noise.
               <br />
@@ -97,7 +99,7 @@ export function Footer() {
                 <ul className="footer-column-links">
                   {links.map((link) => (
                     <li key={link.label}>
-                      <a href={link.href}>{link.label}</a>
+                      {'to' in link ? <Link to={link.to}>{link.label}</Link> : <a href={link.href}>{link.label}</a>}
                     </li>
                   ))}
                 </ul>
@@ -111,9 +113,9 @@ export function Footer() {
             © {new Date().getFullYear()} Chesly. All rights reserved.
           </p>
           <div className="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Cookies</a>
+            <Link to="/privacy">Privacy Policy</Link>
+            <Link to="/terms">Terms of Service</Link>
+            <Link to="/cookies">Cookies</Link>
           </div>
         </div>
       </div>

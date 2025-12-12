@@ -1,51 +1,28 @@
-import { useState } from 'react';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { ValueProposition } from './components/ValueProposition';
-import { ProblemSolution } from './components/ProblemSolution';
-import { Features } from './components/Features';
-import { ProductShowcase } from './components/ProductShowcase';
-import { HowItWorks } from './components/HowItWorks';
-import { Pricing } from './components/Pricing';
-import { Testimonials } from './components/Testimonials';
-import { Comparison } from './components/Comparison';
-import { FAQ } from './components/FAQ';
-import { CTA } from './components/CTA';
-import { Footer } from './components/Footer';
-import { ScrollToTop } from './components/ScrollToTop';
-import { VideoModal } from './components/VideoModal';
+import { Routes, Route } from 'react-router-dom';
+import { SiteLayout } from './components/SiteLayout';
+import { Home } from './pages/Home';
+import { Privacy } from './pages/Privacy';
+import { Terms } from './pages/Terms';
+import { Cookies } from './pages/Cookies';
+import { Security } from './pages/Security';
+import { GDPR } from './pages/GDPR';
+import { NotFound } from './components/NotFound';
 
 function App() {
-  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
-
-  const openVideoModal = () => setIsVideoModalOpen(true);
-  const closeVideoModal = () => setIsVideoModalOpen(false);
-
   return (
     <ErrorBoundary>
-      {/* Skip to main content link for accessibility */}
-      <a href="#main-content" className="skip-link">
-        Skip to main content
-      </a>
-
-      <Navbar />
-      <main id="main-content">
-        <Hero onWatchDemo={openVideoModal} />
-        <ValueProposition />
-        <ProblemSolution />
-        <Features />
-        <ProductShowcase />
-        <HowItWorks />
-        <Pricing />
-        <Testimonials />
-        <Comparison />
-        <FAQ />
-        <CTA />
-      </main>
-      <Footer />
-      <ScrollToTop />
-      <VideoModal isOpen={isVideoModalOpen} onClose={closeVideoModal} />
+      <Routes>
+        <Route element={<SiteLayout />}>
+          <Route index element={<Home />} />
+          <Route path="privacy" element={<Privacy />} />
+          <Route path="terms" element={<Terms />} />
+          <Route path="cookies" element={<Cookies />} />
+          <Route path="security" element={<Security />} />
+          <Route path="gdpr" element={<GDPR />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </ErrorBoundary>
   );
 }

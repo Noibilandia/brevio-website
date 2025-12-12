@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './NotFound.css';
 
 export function NotFound() {
@@ -10,7 +11,7 @@ export function NotFound() {
           Sorry, we couldn't find the page you're looking for. It might have been moved or doesn't exist.
         </p>
         <div className="not-found-actions">
-          <a href="/" className="btn btn-primary btn-lg">
+          <Link to="/" className="btn btn-primary btn-lg">
             <svg
               width="20"
               height="20"
@@ -23,10 +24,10 @@ export function NotFound() {
               <polyline points="9 22 9 12 15 12 15 22" />
             </svg>
             Go Home
-          </a>
-          <a href="#pricing" className="btn btn-secondary btn-lg">
+          </Link>
+          <Link to="/#pricing" className="btn btn-secondary btn-lg">
             View Pricing
-          </a>
+          </Link>
         </div>
       </div>
 

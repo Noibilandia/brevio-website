@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,9 +32,17 @@ export function Navbar() {
   const handleNavClick = (e, href) => {
     e.preventDefault();
     setMobileMenuOpen(false);
+
+    if (location.pathname !== '/') {
+      navigate(`/${href}`);
+      return;
+    }
+
     const target = document.querySelector(href);
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      navigate({ hash: href });
     }
   };
 
@@ -45,12 +56,12 @@ export function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container container">
-        <a href="#" className="navbar-logo">
+        <Link to="/" className="navbar-logo" onClick={() => setMobileMenuOpen(false)}>
           <div className="logo-icon">
             <img src="/cheslylogo.png" alt="Chesly Logo" />
           </div>
           <span className="logo-text">Chesly</span>
-        </a>
+        </Link>
 
         <div className={`navbar-links ${mobileMenuOpen ? 'open' : ''}`}>
           {navLinks.map((link) => (

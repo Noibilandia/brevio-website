@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-export function useScrollReveal(options = {}) {
+function useScrollReveal(options = {}) {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 

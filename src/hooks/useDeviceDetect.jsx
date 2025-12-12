@@ -1,45 +1,51 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+
+const DEFAULT_DEVICE = {
+  os: 'unknown',
+  isMobile: false,
+  isDesktop: true,
+};
+
+function detectDevice() {
+  if (typeof navigator === 'undefined' || typeof window === 'undefined') {
+    return DEFAULT_DEVICE;
+  }
+
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  const platform = navigator.platform || '';
+
+  let os = 'unknown';
+  let isMobile = false;
+
+  // Check for mobile devices first
+  if (/android/i.test(userAgent)) {
+    os = 'android';
+    isMobile = true;
+  } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    os = 'ios';
+    isMobile = true;
+  } else if (/windows phone/i.test(userAgent)) {
+    os = 'windows';
+    isMobile = true;
+  }
+  // Check for desktop OS
+  else if (/Macintosh|MacIntel|MacPPC|Mac68K/.test(platform) || /Mac OS X/.test(userAgent)) {
+    os = 'macos';
+  } else if (/Win32|Win64|Windows|WinCE/.test(platform) || /Windows/.test(userAgent)) {
+    os = 'windows';
+  } else if (/Linux/.test(platform) || /Linux/.test(userAgent)) {
+    os = 'linux';
+  }
+
+  return {
+    os,
+    isMobile,
+    isDesktop: !isMobile,
+  };
+}
 
 export function useDeviceDetect() {
-  const [device, setDevice] = useState({
-    os: 'unknown',
-    isMobile: false,
-    isDesktop: true,
-  });
-
-  useEffect(() => {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    const platform = navigator.platform || '';
-
-    let os = 'unknown';
-    let isMobile = false;
-
-    // Check for mobile devices first
-    if (/android/i.test(userAgent)) {
-      os = 'android';
-      isMobile = true;
-    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-      os = 'ios';
-      isMobile = true;
-    } else if (/windows phone/i.test(userAgent)) {
-      os = 'windows';
-      isMobile = true;
-    }
-    // Check for desktop OS
-    else if (/Macintosh|MacIntel|MacPPC|Mac68K/.test(platform) || /Mac OS X/.test(userAgent)) {
-      os = 'macos';
-    } else if (/Win32|Win64|Windows|WinCE/.test(platform) || /Windows/.test(userAgent)) {
-      os = 'windows';
-    } else if (/Linux/.test(platform) || /Linux/.test(userAgent)) {
-      os = 'linux';
-    }
-
-    setDevice({
-      os,
-      isMobile,
-      isDesktop: !isMobile,
-    });
-  }, []);
+  const [device] = useState(detectDevice);
 
   return device;
 }
